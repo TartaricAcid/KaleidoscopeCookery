@@ -150,7 +150,6 @@ tasks.named('jar', Jar).configure {
                 "Implementation-Version": "${version}"
         ])
     }
-    finalizedBy 'reobfJar'
 }
 
 tasks.withType(JavaCompile).configureEach {
