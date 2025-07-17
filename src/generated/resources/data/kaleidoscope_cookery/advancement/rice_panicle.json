@@ -1,0 +1,34 @@
+{
+  "parent": "kaleidoscope_cookery:iron_hoe",
+  "criteria": {
+    "has_rice_panicle": {
+      "conditions": {
+        "items": [
+          {
+            "items": "kaleidoscope_cookery:rice_panicle"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "background": "kaleidoscope_cookery:textures/advancement/background.png",
+    "description": {
+      "translate": "advancements.kaleidoscope_cookery.rice_panicle.description"
+    },
+    "icon": {
+      "count": 1,
+      "id": "kaleidoscope_cookery:rice_panicle"
+    },
+    "title": {
+      "translate": "advancements.kaleidoscope_cookery.rice_panicle.title"
+    }
+  },
+  "requirements": [
+    [
+      "has_rice_panicle"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

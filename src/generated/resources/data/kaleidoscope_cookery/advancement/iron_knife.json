@@ -1,0 +1,34 @@
+{
+  "parent": "kaleidoscope_cookery:root",
+  "criteria": {
+    "has_iron_knife": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#kaleidoscope_cookery:kitchen_knife"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "background": "kaleidoscope_cookery:textures/advancement/background.png",
+    "description": {
+      "translate": "advancements.kaleidoscope_cookery.iron_knife.description"
+    },
+    "icon": {
+      "count": 1,
+      "id": "kaleidoscope_cookery:iron_kitchen_knife"
+    },
+    "title": {
+      "translate": "advancements.kaleidoscope_cookery.iron_knife.title"
+    }
+  },
+  "requirements": [
+    [
+      "has_iron_knife"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

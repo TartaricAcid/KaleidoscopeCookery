@@ -1,0 +1,27 @@
+{
+  "type": "kaleidoscope_cookery:stockpot",
+  "id": "kaleidoscope_cookery:stockpot/lamb_and_radish_soup",
+  "ingredients": [
+    {
+      "item": "minecraft:carrot"
+    },
+    {
+      "item": "minecraft:carrot"
+    },
+    {
+      "tag": "forge:raw_mutton"
+    },
+    {
+      "tag": "forge:raw_mutton"
+    },
+    [],
+    [],
+    [],
+    [],
+    []
+  ],
+  "result": {
+    "count": 3,
+    "id": "kaleidoscope_cookery:lamb_and_radish_soup"
+  }
+}

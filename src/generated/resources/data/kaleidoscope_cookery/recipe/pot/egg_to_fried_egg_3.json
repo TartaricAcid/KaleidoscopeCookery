@@ -1,0 +1,24 @@
+{
+  "type": "kaleidoscope_cookery:pot",
+  "ingredients": [
+    {
+      "tag": "forge:eggs"
+    },
+    {
+      "tag": "forge:eggs"
+    },
+    {
+      "tag": "forge:eggs"
+    },
+    [],
+    [],
+    [],
+    [],
+    [],
+    []
+  ],
+  "result": {
+    "count": 3,
+    "id": "kaleidoscope_cookery:fried_egg"
+  }
+}

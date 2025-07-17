@@ -1,0 +1,31 @@
+{
+  "type": "kaleidoscope_cookery:stockpot",
+  "id": "kaleidoscope_cookery:stockpot/chicken_and_mushroom_stew",
+  "ingredients": [
+    {
+      "tag": "forge:raw_chicken"
+    },
+    {
+      "tag": "forge:raw_chicken"
+    },
+    {
+      "tag": "forge:raw_chicken"
+    },
+    {
+      "tag": "c:mushrooms"
+    },
+    {
+      "tag": "c:mushrooms"
+    },
+    {
+      "tag": "c:mushrooms"
+    },
+    [],
+    [],
+    []
+  ],
+  "result": {
+    "count": 3,
+    "id": "kaleidoscope_cookery:chicken_and_mushroom_stew"
+  }
+}

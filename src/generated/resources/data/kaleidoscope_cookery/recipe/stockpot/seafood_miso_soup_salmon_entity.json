@@ -1,0 +1,24 @@
+{
+  "type": "kaleidoscope_cookery:stockpot",
+  "id": "kaleidoscope_cookery:stockpot/seafood_miso_soup_salmon_entity",
+  "ingredients": [
+    {
+      "item": "minecraft:kelp"
+    },
+    {
+      "item": "minecraft:bone_meal"
+    },
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
+    []
+  ],
+  "result": {
+    "count": 1,
+    "id": "kaleidoscope_cookery:seafood_miso_soup"
+  },
+  "soup_base": "minecraft:salmon_bucket"
+}

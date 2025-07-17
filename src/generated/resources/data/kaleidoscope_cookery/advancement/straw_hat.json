@@ -1,0 +1,34 @@
+{
+  "parent": "kaleidoscope_cookery:root",
+  "criteria": {
+    "has_straw_hat": {
+      "conditions": {
+        "items": [
+          {
+            "items": "kaleidoscope_cookery:straw_hat"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "background": "kaleidoscope_cookery:textures/advancement/background.png",
+    "description": {
+      "translate": "advancements.kaleidoscope_cookery.straw_hat.description"
+    },
+    "icon": {
+      "count": 1,
+      "id": "kaleidoscope_cookery:straw_hat"
+    },
+    "title": {
+      "translate": "advancements.kaleidoscope_cookery.straw_hat.title"
+    }
+  },
+  "requirements": [
+    [
+      "has_straw_hat"
+    ]
+  ],
+  "sends_telemetry_event": true
+}
