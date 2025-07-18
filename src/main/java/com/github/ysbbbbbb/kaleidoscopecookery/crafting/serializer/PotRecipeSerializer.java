@@ -17,7 +17,10 @@ public class PotRecipeSerializer implements RecipeSerializer<PotRecipe> {
                     Codec.INT.optionalFieldOf("time", 200).forGetter(PotRecipe::time),
                     Codec.INT.optionalFieldOf("stir_fry_count", 3).forGetter(PotRecipe::stirFryCount),
                     Ingredient.CODEC.optionalFieldOf("carrier", Ingredient.EMPTY).forGetter(PotRecipe::carrier),
-                    Ingredient.CODEC.listOf().fieldOf("ingredients").forGetter(recipe -> recipe.ingredients().stream().toList()),
+                    Ingredient.CODEC.listOf().fieldOf("ingredients").xmap(
+                            list -> list,
+                            list -> list.stream().filter(i -> !i.isEmpty()).toList()
+                    ).forGetter(recipe -> recipe.ingredients().stream().toList()),
                     ItemStack.CODEC.fieldOf("result").forGetter(PotRecipe::result)
             ).apply(instance, PotRecipe::new)
     );

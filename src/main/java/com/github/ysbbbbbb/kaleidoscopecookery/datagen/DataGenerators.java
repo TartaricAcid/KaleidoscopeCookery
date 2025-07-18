@@ -26,6 +26,7 @@ public class DataGenerators {
         vanillaPack.addProvider(packOutput -> new TagPoiType(packOutput, registries, helper));
         vanillaPack.addProvider(packOutput -> new TagEntityType(packOutput, registries, helper));
 
+        generator.addProvider(event.includeServer(), new DataMapGenerator(pack, registries));
         generator.addProvider(event.includeServer(), new AdvancementGenerator(pack, registries, helper));
         generator.addProvider(event.includeServer(), new LootTableGenerator(pack, registries));
         generator.addProvider(event.includeServer(), new ModRecipeGenerator(pack, registries));

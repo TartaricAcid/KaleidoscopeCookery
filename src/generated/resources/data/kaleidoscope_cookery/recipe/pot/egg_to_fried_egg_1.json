@@ -3,15 +3,7 @@
   "ingredients": [
     {
       "tag": "forge:eggs"
-    },
-    [],
-    [],
-    [],
-    [],
-    [],
-    [],
-    [],
-    []
+    }
   ],
   "result": {
     "count": 1,

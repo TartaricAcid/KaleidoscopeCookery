@@ -3,15 +3,7 @@
   "ingredients": [
     {
       "item": "kaleidoscope_cookery:raw_cow_offal"
-    },
-    [],
-    [],
-    [],
-    [],
-    [],
-    [],
-    [],
-    []
+    }
   ],
   "result": {
     "count": 1,

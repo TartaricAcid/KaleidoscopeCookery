@@ -1,6 +1,5 @@
 {
   "type": "kaleidoscope_cookery:stockpot",
-  "id": "kaleidoscope_cookery:stockpot/fearsome_thick_soup",
   "ingredients": [
     {
       "item": "minecraft:rotten_flesh"
@@ -19,10 +18,7 @@
     },
     {
       "item": "minecraft:sculk"
-    },
-    [],
-    [],
-    []
+    }
   ],
   "result": {
     "count": 3,

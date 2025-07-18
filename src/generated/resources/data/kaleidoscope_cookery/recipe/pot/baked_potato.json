@@ -3,15 +3,7 @@
   "ingredients": [
     {
       "item": "minecraft:potato"
-    },
-    [],
-    [],
-    [],
-    [],
-    [],
-    [],
-    [],
-    []
+    }
   ],
   "result": {
     "count": 1,

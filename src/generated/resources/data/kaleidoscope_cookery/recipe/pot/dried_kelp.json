@@ -3,15 +3,7 @@
   "ingredients": [
     {
       "item": "minecraft:kelp"
-    },
-    [],
-    [],
-    [],
-    [],
-    [],
-    [],
-    [],
-    []
+    }
   ],
   "result": {
     "count": 1,

@@ -3,15 +3,7 @@
   "ingredients": [
     {
       "item": "minecraft:rabbit"
-    },
-    [],
-    [],
-    [],
-    [],
-    [],
-    [],
-    [],
-    []
+    }
   ],
   "result": {
     "count": 1,

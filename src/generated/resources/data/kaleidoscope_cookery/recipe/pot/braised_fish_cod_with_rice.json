@@ -6,15 +6,7 @@
   "ingredients": [
     {
       "tag": "forge:raw_fishes/cod"
-    },
-    [],
-    [],
-    [],
-    [],
-    [],
-    [],
-    [],
-    []
+    }
   ],
   "result": {
     "count": 1,

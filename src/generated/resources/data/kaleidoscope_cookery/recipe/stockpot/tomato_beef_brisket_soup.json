@@ -1,6 +1,5 @@
 {
   "type": "kaleidoscope_cookery:stockpot",
-  "id": "kaleidoscope_cookery:stockpot/tomato_beef_brisket_soup",
   "ingredients": [
     {
       "tag": "forge:raw_beef"
@@ -19,10 +18,7 @@
     },
     {
       "tag": "forge:crops/tomato"
-    },
-    [],
-    [],
-    []
+    }
   ],
   "result": {
     "count": 3,

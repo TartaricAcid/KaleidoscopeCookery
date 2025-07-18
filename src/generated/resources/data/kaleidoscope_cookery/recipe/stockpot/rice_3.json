@@ -2,7 +2,6 @@
   "type": "kaleidoscope_cookery:stockpot",
   "finished_bubble_color": 15328219,
   "finished_texture": "kaleidoscope_cookery:stockpot/rice_finished",
-  "id": "kaleidoscope_cookery:stockpot/rice_3",
   "ingredients": [
     {
       "tag": "forge:seeds/rice"
@@ -12,13 +11,7 @@
     },
     {
       "tag": "forge:seeds/rice"
-    },
-    [],
-    [],
-    [],
-    [],
-    [],
-    []
+    }
   ],
   "result": {
     "count": 3,

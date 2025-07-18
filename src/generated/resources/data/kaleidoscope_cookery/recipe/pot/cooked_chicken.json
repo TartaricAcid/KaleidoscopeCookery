@@ -3,15 +3,7 @@
   "ingredients": [
     {
       "item": "minecraft:chicken"
-    },
-    [],
-    [],
-    [],
-    [],
-    [],
-    [],
-    [],
-    []
+    }
   ],
   "result": {
     "count": 1,

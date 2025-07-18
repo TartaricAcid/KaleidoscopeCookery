@@ -3,15 +3,7 @@
   "ingredients": [
     {
       "item": "minecraft:beef"
-    },
-    [],
-    [],
-    [],
-    [],
-    [],
-    [],
-    [],
-    []
+    }
   ],
   "result": {
     "count": 1,

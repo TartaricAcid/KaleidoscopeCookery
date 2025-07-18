@@ -1,6 +1,5 @@
 {
   "type": "kaleidoscope_cookery:stockpot",
-  "id": "kaleidoscope_cookery:stockpot/seafood_miso_soup_cod",
   "ingredients": [
     {
       "tag": "forge:raw_fishes/cod"
@@ -16,11 +15,7 @@
     },
     {
       "item": "minecraft:bone_meal"
-    },
-    [],
-    [],
-    [],
-    []
+    }
   ],
   "result": {
     "count": 3,

@@ -1,6 +1,5 @@
 {
   "type": "kaleidoscope_cookery:stockpot",
-  "id": "kaleidoscope_cookery:stockpot/pork_bone_soup",
   "ingredients": [
     {
       "item": "minecraft:bone"
@@ -13,12 +12,7 @@
     },
     {
       "item": "minecraft:bone"
-    },
-    [],
-    [],
-    [],
-    [],
-    []
+    }
   ],
   "result": {
     "count": 3,

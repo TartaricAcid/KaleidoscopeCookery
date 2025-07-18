@@ -1,6 +1,5 @@
 {
   "type": "kaleidoscope_cookery:stockpot",
-  "id": "kaleidoscope_cookery:stockpot/beef_meatball_soup",
   "ingredients": [
     {
       "tag": "forge:raw_beef"
@@ -19,10 +18,7 @@
     },
     {
       "tag": "forge:crops/lettuce"
-    },
-    [],
-    [],
-    []
+    }
   ],
   "result": {
     "count": 3,

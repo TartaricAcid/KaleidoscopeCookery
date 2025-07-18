@@ -14,6 +14,7 @@ import net.minecraft.network.codec.StreamCodec;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraft.world.item.crafting.RecipeHolder;
 import net.minecraft.world.item.crafting.RecipeSerializer;
 
 public class StockpotRecipeSerializer implements RecipeSerializer<StockpotRecipe> {
@@ -25,18 +26,20 @@ public class StockpotRecipeSerializer implements RecipeSerializer<StockpotRecipe
     public static final ResourceLocation DEFAULT_COOKING_TEXTURE = ResourceLocation.fromNamespaceAndPath(KaleidoscopeCookery.MOD_ID, "stockpot/default_cooking");
     public static final ResourceLocation DEFAULT_FINISHED_TEXTURE = ResourceLocation.fromNamespaceAndPath(KaleidoscopeCookery.MOD_ID, "stockpot/default_finished");
 
-    public static StockpotRecipe getEmptyRecipe() {
-        return new StockpotRecipe(EMPTY_ID,
-                Lists.newArrayList(), DEFAULT_SOUP_BASE,
+    public static RecipeHolder<StockpotRecipe> getEmptyRecipe() {
+        StockpotRecipe stockpotRecipe = new StockpotRecipe(Lists.newArrayList(), DEFAULT_SOUP_BASE,
                 ItemStack.EMPTY, DEFAULT_TIME,
                 DEFAULT_COOKING_TEXTURE, DEFAULT_FINISHED_TEXTURE,
                 DEFAULT_COOKING_BUBBLE_COLOR,
                 DEFAULT_FINISHED_BUBBLE_COLOR);
+        return new RecipeHolder<>(EMPTY_ID, stockpotRecipe);
     }
 
     public static final MapCodec<StockpotRecipe> CODEC = RecordCodecBuilder.mapCodec(instance -> instance.group(
-            ResourceLocation.CODEC.fieldOf("id").forGetter(StockpotRecipe::id),
-            Ingredient.CODEC.listOf().fieldOf("ingredients").forGetter(StockpotRecipe::getIngredients),
+            Ingredient.CODEC.listOf().fieldOf("ingredients").xmap(
+                    list -> list,
+                    list -> list.stream().filter(i -> !i.isEmpty()).toList()
+            ).forGetter(StockpotRecipe::getIngredients),
             ResourceLocation.CODEC.optionalFieldOf("soup_base", DEFAULT_SOUP_BASE).forGetter(StockpotRecipe::soupBase),
             ItemStack.CODEC.fieldOf("result").forGetter(StockpotRecipe::result),
             Codec.INT.optionalFieldOf("time", DEFAULT_TIME).forGetter(StockpotRecipe::time),
@@ -47,7 +50,6 @@ public class StockpotRecipeSerializer implements RecipeSerializer<StockpotRecipe
     ).apply(instance, StockpotRecipe::new));
 
     public static final StreamCodec<RegistryFriendlyByteBuf, StockpotRecipe> STREAM_CODEC = StreamCodecUtil.composite(
-            ResourceLocation.STREAM_CODEC, StockpotRecipe::id,
             Ingredient.CONTENTS_STREAM_CODEC.apply(ByteBufCodecs.list()), StockpotRecipe::getIngredients,
             ResourceLocation.STREAM_CODEC, StockpotRecipe::soupBase,
             ItemStack.STREAM_CODEC, StockpotRecipe::result,

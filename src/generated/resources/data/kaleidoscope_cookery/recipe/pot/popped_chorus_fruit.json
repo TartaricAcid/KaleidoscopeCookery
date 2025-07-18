@@ -3,15 +3,7 @@
   "ingredients": [
     {
       "item": "minecraft:chorus_fruit"
-    },
-    [],
-    [],
-    [],
-    [],
-    [],
-    [],
-    [],
-    []
+    }
   ],
   "result": {
     "count": 1,

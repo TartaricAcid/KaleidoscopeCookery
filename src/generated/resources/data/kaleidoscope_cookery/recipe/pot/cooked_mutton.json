@@ -3,15 +3,7 @@
   "ingredients": [
     {
       "item": "minecraft:mutton"
-    },
-    [],
-    [],
-    [],
-    [],
-    [],
-    [],
-    [],
-    []
+    }
   ],
   "result": {
     "count": 1,

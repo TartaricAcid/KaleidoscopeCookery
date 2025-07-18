@@ -3,15 +3,7 @@
   "ingredients": [
     {
       "item": "minecraft:salmon"
-    },
-    [],
-    [],
-    [],
-    [],
-    [],
-    [],
-    [],
-    []
+    }
   ],
   "result": {
     "count": 1,

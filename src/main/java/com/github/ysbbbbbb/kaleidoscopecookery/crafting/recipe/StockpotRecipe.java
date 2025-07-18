@@ -14,14 +14,14 @@ import net.neoforged.neoforge.common.util.RecipeMatcher;
 
 import java.util.List;
 
-public record StockpotRecipe(ResourceLocation id, NonNullList<Ingredient> ingredients,
+public record StockpotRecipe(NonNullList<Ingredient> ingredients,
                              ResourceLocation soupBase, ItemStack result, int time,
                              ResourceLocation cookingTexture, ResourceLocation finishedTexture,
                              int cookingBubbleColor, int finishedBubbleColor) implements BaseRecipe<StockpotInput> {
-    public StockpotRecipe(ResourceLocation id, List<Ingredient> ingredients, ResourceLocation soupBase, ItemStack result,
+    public StockpotRecipe(List<Ingredient> ingredients, ResourceLocation soupBase, ItemStack result,
                           int time, ResourceLocation cookingTexture, ResourceLocation finishedTexture,
                           int cookingBubbleColor, int finishedBubbleColor) {
-        this(id, NonNullList.of(Ingredient.EMPTY, BaseRecipe.fillInputs(ingredients)),
+        this(NonNullList.of(Ingredient.EMPTY, BaseRecipe.fillInputs(ingredients)),
                 soupBase, result, time, cookingTexture, finishedTexture,
                 cookingBubbleColor, finishedBubbleColor);
     }

@@ -18,10 +18,7 @@
     },
     {
       "tag": "forge:eggs"
-    },
-    [],
-    [],
-    []
+    }
   ],
   "result": {
     "count": 6,

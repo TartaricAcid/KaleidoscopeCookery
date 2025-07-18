@@ -135,7 +135,7 @@ public class StockpotRecipeBuilder implements RecipeBuilder {
 
     @Override
     public void save(RecipeOutput recipeOutput, ResourceLocation id) {
-        recipeOutput.accept(id, new StockpotRecipe(id, this.ingredients, this.soupBase, this.result,
+        recipeOutput.accept(id, new StockpotRecipe(this.ingredients, this.soupBase, this.result,
                 this.time, this.cookingTexture, this.finishedTexture, this.cookingBubbleColor, this.finishedBubbleColor), null);
     }
 }

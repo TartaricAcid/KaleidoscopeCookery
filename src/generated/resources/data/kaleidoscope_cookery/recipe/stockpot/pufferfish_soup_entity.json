@@ -1,18 +1,9 @@
 {
   "type": "kaleidoscope_cookery:stockpot",
-  "id": "kaleidoscope_cookery:stockpot/pufferfish_soup_entity",
   "ingredients": [
     {
       "item": "minecraft:seagrass"
-    },
-    [],
-    [],
-    [],
-    [],
-    [],
-    [],
-    [],
-    []
+    }
   ],
   "result": {
     "count": 1,

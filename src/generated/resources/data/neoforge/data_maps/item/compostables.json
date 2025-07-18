@@ -1,0 +1,48 @@
+{
+  "values": {
+    "kaleidoscope_cookery:caterpillar": {
+      "can_villager_compost": true,
+      "chance": 1.0
+    },
+    "kaleidoscope_cookery:chili_seed": {
+      "can_villager_compost": true,
+      "chance": 0.3
+    },
+    "kaleidoscope_cookery:green_chili": {
+      "can_villager_compost": true,
+      "chance": 0.65
+    },
+    "kaleidoscope_cookery:lettuce": {
+      "can_villager_compost": true,
+      "chance": 0.65
+    },
+    "kaleidoscope_cookery:lettuce_seed": {
+      "can_villager_compost": true,
+      "chance": 0.3
+    },
+    "kaleidoscope_cookery:red_chili": {
+      "can_villager_compost": true,
+      "chance": 0.65
+    },
+    "kaleidoscope_cookery:rice": {
+      "can_villager_compost": true,
+      "chance": 0.3
+    },
+    "kaleidoscope_cookery:rice_panicle": {
+      "can_villager_compost": true,
+      "chance": 0.65
+    },
+    "kaleidoscope_cookery:tomato": {
+      "can_villager_compost": true,
+      "chance": 0.65
+    },
+    "kaleidoscope_cookery:tomato_seed": {
+      "can_villager_compost": true,
+      "chance": 0.3
+    },
+    "kaleidoscope_cookery:wild_rice": {
+      "can_villager_compost": true,
+      "chance": 0.3
+    }
+  }
+}

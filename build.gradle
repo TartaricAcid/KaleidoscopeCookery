@@ -120,6 +120,7 @@ dependencies {
     runtimeOnly "curse.maven:probejs-585406:5820894"
 
     runtimeOnly 'curse.maven:touhou-little-maid-355044:6613831-sources-6613865'
+    runtimeOnly "maven.modrinth:appleskin:3.0.7+mc1.21-neoforge"
 }
 
 tasks.withType(ProcessResources).configureEach {

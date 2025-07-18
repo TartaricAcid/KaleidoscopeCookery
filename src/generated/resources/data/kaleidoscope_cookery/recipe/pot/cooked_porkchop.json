@@ -3,15 +3,7 @@
   "ingredients": [
     {
       "item": "minecraft:porkchop"
-    },
-    [],
-    [],
-    [],
-    [],
-    [],
-    [],
-    [],
-    []
+    }
   ],
   "result": {
     "count": 1,

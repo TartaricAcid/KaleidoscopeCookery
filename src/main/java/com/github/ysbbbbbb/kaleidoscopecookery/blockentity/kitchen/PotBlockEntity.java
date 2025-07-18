@@ -369,7 +369,7 @@ public class PotBlockEntity extends BaseBlockEntity implements IPot {
             return false;
         }
         // 只允许食物和特定 tag 的东西放入
-        if (itemStack.has(DataComponents.FOOD) && !itemStack.is(TagItem.POT_INGREDIENT)) {
+        if (!itemStack.has(DataComponents.FOOD) && !itemStack.is(TagItem.POT_INGREDIENT)) {
             return false;
         }
         for (int i = 0; i < this.inputs.size(); i++) {

@@ -47,6 +47,15 @@ public class StrawHatItem extends ArmorItem {
             private StrawHatModel cachedModel = null;
 
             @Override
+            public int getArmorLayerTintColor(ItemStack stack, LivingEntity entity, ArmorMaterial.Layer layer, int layerIdx, int fallbackColor) {
+                if (layerIdx == 0) {
+                    return IClientItemExtensions.super.getArmorLayerTintColor(stack, entity, layer, layerIdx, fallbackColor);
+                }
+                // 必须返回 0，否则会渲染两次帽子
+                return 0;
+            }
+
+            @Override
             public @NotNull Model getGenericArmorModel(LivingEntity livingEntity, ItemStack itemStack, EquipmentSlot equipmentSlot, HumanoidModel<?> original) {
                 if (cachedModel == null) {
                     cachedModel = new StrawHatModel(Minecraft.getInstance().getEntityModels().bakeLayer(StrawHatModel.LAYER_LOCATION));

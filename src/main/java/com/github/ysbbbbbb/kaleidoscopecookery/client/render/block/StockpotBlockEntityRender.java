@@ -53,13 +53,13 @@ public class StockpotBlockEntityRender implements BlockEntityRenderer<StockpotBl
             soupBase.renderWhenPutIngredient(stockpot, partialTick, poseStack, buffer, packedLight, packedOverlay, 0.38f);
             renderItems(stockpot, poseStack, buffer, packedLight, packedOverlay, false);
         } else if (status == StockpotBlockEntity.COOKING) {
-            soupBase.renderWhenCooking(stockpot, partialTick, poseStack, buffer, packedLight, packedOverlay, stockpot.recipe.cookingTexture(), 0.38f);
+            soupBase.renderWhenCooking(stockpot, partialTick, poseStack, buffer, packedLight, packedOverlay, stockpot.recipe.value().cookingTexture(), 0.38f);
             renderItems(stockpot, poseStack, buffer, packedLight, packedOverlay, true);
         } else if (status == StockpotBlockEntity.FINISHED) {
             int takeoutCount = stockpot.getTakeoutCount();
             int maxCount = Math.min(stockpot.getResult().getCount(), StockpotBlockEntity.MAX_TAKEOUT_COUNT);
             float soupHeight = 0.065f + 0.315f / maxCount * takeoutCount;
-            soupBase.renderWhenFinished(stockpot, partialTick, poseStack, buffer, packedLight, packedOverlay, stockpot.recipe.finishedTexture(), soupHeight);
+            soupBase.renderWhenFinished(stockpot, partialTick, poseStack, buffer, packedLight, packedOverlay, stockpot.recipe.value().finishedTexture(), soupHeight);
         }
     }
 
