@@ -119,7 +119,7 @@ public class ModCreativeTabs {
                 output.accept(ModItems.FISH_FLAVORED_SHREDDED_PORK_RICE_BOWL.get());
                 output.accept(ModItems.BRAISED_FISH_RICE_BOWL.get());
                 output.accept(ModItems.SPICY_CHICKEN_RICE_BOWL.get());
-                output.accept(ModItems.SUSPICIOUS_STEW_RICE_BOWL.get());
+                output.accept(ModItems.SUSPICIOUS_STIR_FRY_RICE_BOWL.get());
                 output.accept(ModItems.PORK_BONE_SOUP.get());
                 output.accept(ModItems.SEAFOOD_MISO_SOUP.get());
                 output.accept(ModItems.FEARSOME_THICK_SOUP.get());

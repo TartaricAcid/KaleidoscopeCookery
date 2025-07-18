@@ -62,6 +62,8 @@ public class TagItem extends ItemTagsProvider {
         tag(ItemTags.SHOVELS).add(ModItems.KITCHEN_SHOVEL.get());
         tag(ItemTags.SWORDS).addTag(KITCHEN_KNIFE);
         tag(EXTINGUISH_STOVE).addTag(ItemTags.SHOVELS);
+        tag(ItemTags.CHICKEN_FOOD).addTag(COOKERY_MOD_SEEDS).add(ModItems.RICE_SEED.get());
+        tag(ItemTags.PARROT_FOOD).addTag(COOKERY_MOD_SEEDS).add(ModItems.RICE_SEED.get());
 
         // 社区兼容
         tag(TagCommon.CROPS_CHILI_PEPPER).add(ModItems.RED_CHILI.get(), ModItems.GREEN_CHILI.get());

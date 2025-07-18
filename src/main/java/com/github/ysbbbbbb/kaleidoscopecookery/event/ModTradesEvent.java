@@ -47,7 +47,7 @@ public class ModTradesEvent {
     // 老手交易（等级3）
     private static void addJourneymanTrades(VillagerTradesEvent event) {
         addTrade(event, 3, DELICIOUS_EGG_FRIED_RICE.get(), 1, EMERALD, 3, 16, 5, 0.05f);
-        addTrade(event, 3, SUSPICIOUS_STEW_RICE_BOWL.get(), 3, EMERALD, 1, 16, 5, 0.05f);
+        addTrade(event, 3, SUSPICIOUS_STIR_FRY_RICE_BOWL.get(), 3, EMERALD, 1, 16, 5, 0.05f);
         addTrade(event, 3, FoodBiteRegistry.getItem(FoodBiteRegistry.DARK_CUISINE), 5, EMERALD, 2, 16, 5, 0.1f);
     }
 

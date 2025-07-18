@@ -168,12 +168,5 @@ public class PotRecipeProvider extends ModRecipeProvider {
                 .addInput(Items.CARROT).setBowlCarrier()
                 .setResult(ModItems.DELICIOUS_EGG_FRIED_RICE.get())
                 .save(consumer);
-
-        PotRecipeBuilder.builder()
-                .addInput(ItemTags.FLOWERS)
-                .addInput(Items.RED_MUSHROOM, Items.BROWN_MUSHROOM)
-                .setCarrier(ModItems.COOKED_RICE.get())
-                .setResult(ModItems.SUSPICIOUS_STEW_RICE_BOWL.get())
-                .save(consumer);
     }
 }

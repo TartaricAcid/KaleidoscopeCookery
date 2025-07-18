@@ -422,7 +422,7 @@ public interface ModFoods {
             .alwaysEdible().build();
 
     // 谜之炒菜盖饭
-    FoodProperties SUSPICIOUS_STEW_RICE_BOWL = (new FoodProperties.Builder())
+    FoodProperties SUSPICIOUS_STIR_FRY_RICE_BOWL = (new FoodProperties.Builder())
             .nutrition(8).saturationModifier(0.4F)
             .effect(() -> new MobEffectInstance(MOVEMENT_SPEED, 1200), 0.15F)
             .effect(() -> new MobEffectInstance(JUMP, 1200), 0.15F)

@@ -102,7 +102,7 @@ public final class ModItems {
     public static DeferredItem<Item> FISH_FLAVORED_SHREDDED_PORK_RICE_BOWL = ITEMS.register("fish_flavored_shredded_pork_rice_bowl", () -> new BowlFoodOnlyItem(ModFoods.FISH_FLAVORED_SHREDDED_PORK_RICE_BOWL));
     public static DeferredItem<Item> BRAISED_FISH_RICE_BOWL = ITEMS.register("braised_fish_rice_bowl", () -> new BowlFoodOnlyItem(ModFoods.BRAISED_FISH_RICE_BOWL));
     public static DeferredItem<Item> SPICY_CHICKEN_RICE_BOWL = ITEMS.register("spicy_chicken_rice_bowl", () -> new BowlFoodOnlyItem(ModFoods.SPICY_CHICKEN_RICE_BOWL));
-    public static DeferredItem<Item> SUSPICIOUS_STEW_RICE_BOWL = ITEMS.register("suspicious_stew_rice_bowl", () -> new BowlFoodOnlyItem(ModFoods.SUSPICIOUS_STEW_RICE_BOWL));
+    public static DeferredItem<Item> SUSPICIOUS_STIR_FRY_RICE_BOWL = ITEMS.register("suspicious_stir_fry_rice_bowl", () -> new BowlFoodOnlyItem(ModFoods.SUSPICIOUS_STIR_FRY_RICE_BOWL));
     public static DeferredItem<Item> EGG_FRIED_RICE = ITEMS.register("egg_fried_rice", () -> new BowlFoodOnlyItem(ModFoods.EGG_FRIED_RICE));
     public static DeferredItem<Item> DELICIOUS_EGG_FRIED_RICE = ITEMS.register("delicious_egg_fried_rice", () -> new BowlFoodOnlyItem(ModFoods.DELICIOUS_EGG_FRIED_RICE));
     public static DeferredItem<Item> PORK_BONE_SOUP = ITEMS.register("pork_bone_soup", () -> new BowlFoodOnlyItem(ModFoods.PORK_BONE_SOUP));

@@ -54,7 +54,7 @@ public class ItemModelGenerator extends ItemModelProvider {
         basicItem(ModItems.FISH_FLAVORED_SHREDDED_PORK_RICE_BOWL.get());
         basicItem(ModItems.BRAISED_FISH_RICE_BOWL.get());
         basicItem(ModItems.SPICY_CHICKEN_RICE_BOWL.get());
-        basicItem(ModItems.SUSPICIOUS_STEW_RICE_BOWL.get());
+        basicItem(ModItems.SUSPICIOUS_STIR_FRY_RICE_BOWL.get());
         basicItem(ModItems.EGG_FRIED_RICE.get());
         basicItem(ModItems.DELICIOUS_EGG_FRIED_RICE.get());
         basicItem(ModItems.PORK_BONE_SOUP.get());
