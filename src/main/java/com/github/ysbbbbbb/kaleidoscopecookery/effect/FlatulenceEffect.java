@@ -1,17 +1,13 @@
 package com.github.ysbbbbbb.kaleidoscopecookery.effect;
 
+import com.github.ysbbbbbb.kaleidoscopecookery.init.ModAttachmentType;
 import com.github.ysbbbbbb.kaleidoscopecookery.init.ModTrigger;
-import net.minecraft.core.BlockPos;
-import net.minecraft.nbt.CompoundTag;
-import net.minecraft.nbt.NbtUtils;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.ai.attributes.AttributeMap;
 import net.minecraft.world.phys.Vec3;
 
 public class FlatulenceEffect extends BaseEffect {
-    public static final String FLATULENCE_EFFECT_STARTING_POSITION = "FlatulenceEffectStartingPosition";
-
     public FlatulenceEffect(int color) {
         super(color);
     }
@@ -29,16 +25,12 @@ public class FlatulenceEffect extends BaseEffect {
     @Override
     public boolean applyEffectTick(LivingEntity livingEntity, int amplifier) {
         if (livingEntity instanceof ServerPlayer serverPlayer) {
-            CompoundTag data = serverPlayer.getPersistentData();
-            if (!data.contains(FLATULENCE_EFFECT_STARTING_POSITION)) {
-                // 开始记录坐标
-                BlockPos position = serverPlayer.blockPosition();
-                data.put(FLATULENCE_EFFECT_STARTING_POSITION, NbtUtils.writeBlockPos(position));
+            if (!serverPlayer.hasData(ModAttachmentType.FLATULENCE_EFFECT_STARTING_POSITION)) {
+                serverPlayer.setData(ModAttachmentType.FLATULENCE_EFFECT_STARTING_POSITION, serverPlayer.position());
             } else {
-                NbtUtils.readBlockPos(data, FLATULENCE_EFFECT_STARTING_POSITION).ifPresent(blockPos -> {
-                    // 检查坐标是否改变，触发触发器
-                    ModTrigger.FLATULENCE_FLY_HEIGHT.get().trigger(serverPlayer, new Vec3(blockPos.getX(), blockPos.getY(), blockPos.getZ()));
-                });
+                Vec3 position = serverPlayer.getData(ModAttachmentType.FLATULENCE_EFFECT_STARTING_POSITION);
+                // 检查坐标是否改变，触发触发器
+                ModTrigger.FLATULENCE_FLY_HEIGHT.get().trigger(serverPlayer, position);
             }
         }
         return true;

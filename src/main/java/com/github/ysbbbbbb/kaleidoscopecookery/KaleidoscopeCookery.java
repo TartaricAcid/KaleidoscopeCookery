@@ -35,5 +35,6 @@ public class KaleidoscopeCookery {
         ModParticles.PARTICLES.register(modEventBus);
         ModRecipes.RECIPE_SERIALIZERS.register(modEventBus);
         ModDataComponents.DATA_COMPONENT_TYPES.register(modEventBus);
+        ModAttachmentType.ATTACHMENT_TYPES.register(modEventBus);
     }
 }

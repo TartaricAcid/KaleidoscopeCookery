@@ -10,6 +10,8 @@ import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.event.tick.EntityTickEvent;
 
+import static net.minecraft.world.entity.EquipmentSlot.Type.HUMANOID_ARMOR;
+
 @EventBusSubscriber(modid = KaleidoscopeCookery.MOD_ID)
 public class ArmorEffectHandler {
     @SubscribeEvent
@@ -26,7 +28,7 @@ public class ArmorEffectHandler {
         }
         for (EquipmentSlot slot : EquipmentSlot.values()) {
             // 只要护甲不符合的，就直接返回
-            if (slot.isArmor() && !entity.getItemBySlot(slot).is(TagMod.FARMER_ARMOR)) {
+            if (slot.getType() == HUMANOID_ARMOR && !entity.getItemBySlot(slot).is(TagMod.FARMER_ARMOR)) {
                 return;
             }
         }
