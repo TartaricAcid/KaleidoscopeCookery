@@ -23,11 +23,11 @@ public class StrawHatModel extends EntityModel<Entity> {
         MeshDefinition meshdefinition = new MeshDefinition();
         PartDefinition partdefinition = meshdefinition.getRoot();
 
-        PartDefinition head = partdefinition.addOrReplaceChild("head", CubeListBuilder.create(), PartPose.offsetAndRotation(0.0F, 24.0F, -0.5F, 0.0436F, 0.0436F, 0.0436F));
+        PartDefinition head = partdefinition.addOrReplaceChild("head", CubeListBuilder.create(), PartPose.offset(0.0F, 24.0F, 0.0F));
 
         PartDefinition bone = head.addOrReplaceChild("bone", CubeListBuilder.create().texOffs(-10, 17).addBox(-7.5F, -4.0F, -7.5F, 15.0F, 0.0F, 15.0F, new CubeDeformation(0.01F))
-                .texOffs(32, 0).addBox(-4.0F, -8.0F, -4.0F, 8.0F, 4.0F, 8.0F, new CubeDeformation(0.0F))
-                .texOffs(0, 42).addBox(-4.0F, -7.25F, -4.0F, 8.0F, 4.0F, 8.0F, new CubeDeformation(0.25F)), PartPose.offsetAndRotation(0.3F, 0.5F, 0.0F, -0.0873F, 0.0F, -0.0873F));
+                .texOffs(30, 0).addBox(-4.0F, -8.0F, -4.5F, 8.0F, 4.0F, 9.0F, new CubeDeformation(0.0F))
+                .texOffs(0, 41).addBox(-4.0F, -7.25F, -4.5F, 8.0F, 4.0F, 9.0F, new CubeDeformation(0.1F)), PartPose.offsetAndRotation(0.3F, 0.5F, 0.0F, -0.0873F, 0.0F, -0.0873F));
 
         return LayerDefinition.create(meshdefinition, 64, 64);
     }
