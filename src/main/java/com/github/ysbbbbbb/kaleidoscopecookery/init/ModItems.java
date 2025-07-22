@@ -32,9 +32,9 @@ public final class ModItems {
     public static DeferredItem<Item> SCARECROW = ITEMS.register("scarecrow", ScarecrowItem::new);
     public static DeferredItem<Item> STRAW_HAT = ITEMS.register("straw_hat", () -> new StrawHatItem(false));
     public static DeferredItem<Item> STRAW_HAT_FLOWER = ITEMS.register("straw_hat_flower", () -> new StrawHatItem(true));
-    public static final DeferredItem<Item> FARMER_CHEST_PLATE = ITEMS.register("farmer_chest_plate", () -> new ArmorItem(ModArmorMaterials.FARMER, ArmorItem.Type.CHESTPLATE, new Item.Properties()));
-    public static final DeferredItem<Item> FARMER_LEGGINGS = ITEMS.register("farmer_leggings", () -> new ArmorItem(ModArmorMaterials.FARMER, ArmorItem.Type.LEGGINGS, new Item.Properties()));
-    public static final DeferredItem<Item> FARMER_BOOTS = ITEMS.register("farmer_boots", () -> new ArmorItem(ModArmorMaterials.FARMER, ArmorItem.Type.BOOTS, new Item.Properties()));
+    public static final DeferredItem<Item> FARMER_CHEST_PLATE = ITEMS.register("farmer_chest_plate", () -> new ArmorItem(ModArmorMaterials.FARMER, ArmorItem.Type.CHESTPLATE, new Item.Properties().stacksTo(1)));
+    public static final DeferredItem<Item> FARMER_LEGGINGS = ITEMS.register("farmer_leggings", () -> new ArmorItem(ModArmorMaterials.FARMER, ArmorItem.Type.LEGGINGS, new Item.Properties().stacksTo(1)));
+    public static final DeferredItem<Item> FARMER_BOOTS = ITEMS.register("farmer_boots", () -> new ArmorItem(ModArmorMaterials.FARMER, ArmorItem.Type.BOOTS, new Item.Properties().stacksTo(1)));
 
     public static DeferredItem<Item> TOMATO_SEED = ITEMS.register("tomato_seed", () -> new ItemNameBlockItem(ModBlocks.TOMATO_CROP.get(), new Item.Properties()));
     public static DeferredItem<Item> CHILI_SEED = ITEMS.register("chili_seed", () -> new ItemNameBlockItem(ModBlocks.CHILI_CROP.get(), new Item.Properties()));

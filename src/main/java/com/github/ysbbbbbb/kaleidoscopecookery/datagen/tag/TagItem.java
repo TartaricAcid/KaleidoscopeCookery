@@ -15,6 +15,7 @@ import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Block;
+import net.neoforged.neoforge.common.Tags;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import org.jetbrains.annotations.Nullable;
 
@@ -92,7 +93,7 @@ public class TagItem extends ItemTagsProvider {
         tag(TagCommon.RAW_CHICKEN).add(CHICKEN);
         tag(TagCommon.RAW_PORK).add(ModItems.RAW_PORK_BELLY.get(), PORKCHOP);
         tag(TagCommon.RAW_MUTTON).add(ModItems.RAW_LAMB_CHOPS.get(), MUTTON);
-        tag(TagCommon.EGGS).add(EGG, TURTLE_EGG);
+        tag(Tags.Items.EGGS).add(EGG, TURTLE_EGG);
         tag(TagCommon.RAW_FISHES_TROPICAL).add(ModItems.SASHIMI.get());
         tag(TagCommon.RAW_FISHES_COD).add(COD);
         tag(TagCommon.RAW_FISHES_SALMON).add(SALMON);
@@ -123,7 +124,7 @@ public class TagItem extends ItemTagsProvider {
                         TagCommon.SEEDS_TOMATO,
                         TagCommon.SEEDS_LETTUCE,
                         TagCommon.SEEDS_RICE,
-                        TagCommon.EGGS
+                        Tags.Items.EGGS
                 ).add(
                         STONE,
                         GRANITE,

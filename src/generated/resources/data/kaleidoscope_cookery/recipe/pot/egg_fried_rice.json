@@ -11,7 +11,7 @@
       "tag": "c:eggs"
     },
     {
-      "tag": "c:cooked_rice"
+      "tag": "c:foods/cooked_rice"
     }
   ],
   "result": {

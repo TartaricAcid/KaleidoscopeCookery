@@ -142,28 +142,28 @@ public class PotRecipeProvider extends ModRecipeProvider {
                 .save(consumer);
 
         PotRecipeBuilder.builder()
-                .addInput(TagCommon.EGGS, TagCommon.EGGS, TagCommon.COOKED_RICE)
+                .addInput(Tags.Items.EGGS, Tags.Items.EGGS, TagCommon.COOKED_RICE)
                 .setBowlCarrier()
                 .setResult(ModItems.EGG_FRIED_RICE.get())
                 .save(consumer);
 
         PotRecipeBuilder.builder()
-                .addInput(TagCommon.EGGS, TagCommon.EGGS, TagCommon.EGGS, TagCommon.EGGS,
+                .addInput(Tags.Items.EGGS, Tags.Items.EGGS, Tags.Items.EGGS, Tags.Items.EGGS,
                         TagCommon.COOKED_RICE, TagCommon.COOKED_RICE)
                 .setBowlCarrier()
                 .setResult(ModItems.EGG_FRIED_RICE.get(), 2)
                 .save(consumer, "egg_fried_rice_2");
 
         PotRecipeBuilder.builder()
-                .addInput(TagCommon.EGGS, TagCommon.EGGS, TagCommon.EGGS,
-                        TagCommon.EGGS, TagCommon.EGGS, TagCommon.EGGS,
+                .addInput(Tags.Items.EGGS, Tags.Items.EGGS, Tags.Items.EGGS,
+                        Tags.Items.EGGS, Tags.Items.EGGS, Tags.Items.EGGS,
                         TagCommon.COOKED_RICE, TagCommon.COOKED_RICE, TagCommon.COOKED_RICE)
                 .setBowlCarrier()
                 .setResult(ModItems.EGG_FRIED_RICE.get(), 3)
                 .save(consumer, "egg_fried_rice_3");
 
         PotRecipeBuilder.builder()
-                .addInput(TagCommon.EGGS, TagCommon.EGGS, TagCommon.CROPS_LETTUCE,
+                .addInput(Tags.Items.EGGS, Tags.Items.EGGS, TagCommon.CROPS_LETTUCE,
                         TagCommon.CROPS_LETTUCE, TagCommon.COOKED_RICE)
                 .addInput(Items.CARROT).setBowlCarrier()
                 .setResult(ModItems.DELICIOUS_EGG_FRIED_RICE.get())

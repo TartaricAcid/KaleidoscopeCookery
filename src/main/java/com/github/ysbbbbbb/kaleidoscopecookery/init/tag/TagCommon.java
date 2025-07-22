@@ -28,20 +28,19 @@ public interface TagCommon {
 
     TagKey<Item> GRAIN_RICE = itemTag("grain/rice");
 
-    TagKey<Item> COOKED_BEEF = itemTag("cooked_beef");
-    TagKey<Item> COOKED_PORK = itemTag("cooked_pork");
-    TagKey<Item> COOKED_MUTTON = itemTag("cooked_mutton");
-    TagKey<Item> COOKED_EGGS = itemTag("cooked_eggs");
-    TagKey<Item> COOKED_RICE = itemTag("cooked_rice");
+    TagKey<Item> COOKED_BEEF = itemTag("foods/cooked_beef");
+    TagKey<Item> COOKED_PORK = itemTag("foods/cooked_pork");
+    TagKey<Item> COOKED_MUTTON = itemTag("foods/cooked_mutton");
+    TagKey<Item> COOKED_EGGS = itemTag("foods/cooked_eggs");
+    TagKey<Item> COOKED_RICE = itemTag("foods/cooked_rice");
 
-    TagKey<Item> RAW_BEEF = itemTag("raw_beef");
-    TagKey<Item> RAW_CHICKEN = itemTag("raw_chicken");
-    TagKey<Item> RAW_PORK = itemTag("raw_pork");
-    TagKey<Item> RAW_MUTTON = itemTag("raw_mutton");
-    TagKey<Item> EGGS = itemTag("eggs");
-    TagKey<Item> RAW_FISHES_COD = itemTag("raw_fishes/cod");
-    TagKey<Item> RAW_FISHES_SALMON = itemTag("raw_fishes/salmon");
-    TagKey<Item> RAW_FISHES_TROPICAL = itemTag("raw_fishes/tropical_fish");
+    TagKey<Item> RAW_BEEF = itemTag("foods/raw_beef");
+    TagKey<Item> RAW_CHICKEN = itemTag("foods/raw_chicken");
+    TagKey<Item> RAW_PORK = itemTag("foods/raw_pork");
+    TagKey<Item> RAW_MUTTON = itemTag("foods/raw_mutton");
+    TagKey<Item> RAW_FISHES_COD = itemTag("foods/raw_cod");
+    TagKey<Item> RAW_FISHES_SALMON = itemTag("foods/raw_salmon");
+    TagKey<Item> RAW_FISHES_TROPICAL = itemTag("foods/tropical_fish");
 
     static TagKey<Item> itemTag(String name) {
         return TagKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath("c", name));

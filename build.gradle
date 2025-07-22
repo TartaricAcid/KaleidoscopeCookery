@@ -131,6 +131,7 @@ dependencies {
 
     runtimeOnly 'curse.maven:touhou-little-maid-355044:6613831-sources-6613865'
     runtimeOnly "maven.modrinth:appleskin:3.0.7+mc1.21-neoforge"
+    runtimeOnly "maven.modrinth:farmers-delight:1.21.1-1.2.8-neoforge"
 }
 
 tasks.withType(ProcessResources).configureEach {
