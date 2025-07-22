@@ -4,13 +4,13 @@
   "finished_texture": "kaleidoscope_cookery:stockpot/rice_finished",
   "ingredients": [
     {
-      "tag": "forge:seeds/rice"
+      "tag": "c:seeds/rice"
     },
     {
-      "tag": "forge:seeds/rice"
+      "tag": "c:seeds/rice"
     },
     {
-      "tag": "forge:seeds/rice"
+      "tag": "c:seeds/rice"
     }
   ],
   "result": {

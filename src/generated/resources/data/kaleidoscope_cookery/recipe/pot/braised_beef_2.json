@@ -5,28 +5,28 @@
   },
   "ingredients": [
     {
-      "tag": "forge:raw_beef"
+      "tag": "c:raw_beef"
     },
     {
-      "tag": "forge:raw_beef"
+      "tag": "c:raw_beef"
     },
     {
-      "tag": "forge:raw_beef"
+      "tag": "c:raw_beef"
     },
     {
-      "tag": "forge:raw_beef"
+      "tag": "c:raw_beef"
     },
     {
-      "tag": "forge:crops/chilipepper"
+      "tag": "c:crops/chilipepper"
     },
     {
-      "tag": "forge:crops/chilipepper"
+      "tag": "c:crops/chilipepper"
     },
     {
-      "tag": "forge:crops/chilipepper"
+      "tag": "c:crops/chilipepper"
     },
     {
-      "tag": "forge:crops/chilipepper"
+      "tag": "c:crops/chilipepper"
     }
   ],
   "result": {

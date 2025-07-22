@@ -2,22 +2,22 @@
   "type": "kaleidoscope_cookery:stockpot",
   "ingredients": [
     {
-      "tag": "forge:raw_beef"
+      "tag": "c:raw_beef"
     },
     {
-      "tag": "forge:raw_beef"
+      "tag": "c:raw_beef"
     },
     {
-      "tag": "forge:raw_beef"
+      "tag": "c:raw_beef"
     },
     {
-      "tag": "forge:raw_beef"
+      "tag": "c:raw_beef"
     },
     {
-      "tag": "forge:crops/lettuce"
+      "tag": "c:crops/lettuce"
     },
     {
-      "tag": "forge:crops/lettuce"
+      "tag": "c:crops/lettuce"
     }
   ],
   "result": {

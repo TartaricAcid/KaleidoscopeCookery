@@ -5,19 +5,19 @@
   },
   "ingredients": [
     {
-      "tag": "forge:eggs"
+      "tag": "c:eggs"
     },
     {
-      "tag": "forge:eggs"
+      "tag": "c:eggs"
     },
     {
-      "tag": "forge:crops/lettuce"
+      "tag": "c:crops/lettuce"
     },
     {
-      "tag": "forge:crops/lettuce"
+      "tag": "c:crops/lettuce"
     },
     {
-      "tag": "forge:cooked_rice"
+      "tag": "c:cooked_rice"
     },
     {
       "item": "minecraft:carrot"

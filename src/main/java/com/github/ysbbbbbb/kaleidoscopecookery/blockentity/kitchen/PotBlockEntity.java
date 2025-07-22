@@ -433,9 +433,7 @@ public class PotBlockEntity extends BaseBlockEntity implements IPot {
         super.saveAdditional(tag, registries);
         tag.put(INPUTS, ContainerHelper.saveAllItems(new CompoundTag(), this.inputs, registries));
         tag.put(CARRIER, Ingredient.CODEC.encodeStart(NbtOps.INSTANCE, this.carrier).getOrThrow());
-        if (!this.result.isEmpty()) {
-            tag.put(RESULT, this.result.save(registries));
-        }
+        tag.put(RESULT, this.result.saveOptional(registries));
         tag.putInt(STATUS, this.status);
         tag.putInt(CURRENT_TICK, this.currentTick);
         tag.putInt(STIR_FRY_COUNT, this.stirFryCount);

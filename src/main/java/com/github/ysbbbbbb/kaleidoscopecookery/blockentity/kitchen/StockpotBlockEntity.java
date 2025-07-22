@@ -387,15 +387,11 @@ public class StockpotBlockEntity extends BaseBlockEntity implements IStockpot {
         tag.put(INPUTS, ContainerHelper.saveAllItems(new CompoundTag(), this.inputs, registries));
         tag.putString(RECIPE_ID, this.recipeId.toString());
         tag.putString(SOUP_BASE_ID, this.soupBaseId.toString());
-        if (!this.result.isEmpty()) {
-            tag.put(RESULT, this.result.save(registries));
-        }
+        tag.put(RESULT, this.result.saveOptional(registries));
         tag.putInt(STATUS, this.status);
         tag.putInt(CURRENT_TICK, this.currentTick);
         tag.putInt(TAKEOUT_COUNT, this.takeoutCount);
-        if (!this.lidItem.isEmpty()) {
-            tag.put(LID_ITEM, this.lidItem.save(registries));
-        }
+        tag.put(LID_ITEM, this.lidItem.saveOptional(registries));
     }
 
     @Override

@@ -56,12 +56,8 @@ public class KitchenwareRacksBlockEntity extends BaseBlockEntity implements IKit
     @Override
     protected void saveAdditional(CompoundTag tag, HolderLookup.Provider registries) {
         super.saveAdditional(tag, registries);
-        if (!this.itemLeft.isEmpty()) {
-            tag.put(LEFT_ITEM, itemLeft.save(registries));
-        }
-        if (!this.itemRight.isEmpty()) {
-            tag.put(RIGHT_ITEM, itemRight.save(registries));
-        }
+        tag.put(LEFT_ITEM, itemLeft.saveOptional(registries));
+        tag.put(RIGHT_ITEM, itemRight.saveOptional(registries));
     }
 
     @Override

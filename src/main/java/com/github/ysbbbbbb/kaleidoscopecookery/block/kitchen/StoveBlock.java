@@ -1,6 +1,7 @@
 package com.github.ysbbbbbb.kaleidoscopecookery.block.kitchen;
 
 import com.github.ysbbbbbb.kaleidoscopecookery.advancements.critereon.ModEventTriggerType;
+import com.github.ysbbbbbb.kaleidoscopecookery.init.ModItems;
 import com.github.ysbbbbbb.kaleidoscopecookery.init.ModTrigger;
 import com.github.ysbbbbbb.kaleidoscopecookery.init.tag.TagMod;
 import com.mojang.serialization.MapCodec;
@@ -42,6 +43,8 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
 
+import static com.github.ysbbbbbb.kaleidoscopecookery.item.KitchenShovelItem.hasOil;
+import static com.github.ysbbbbbb.kaleidoscopecookery.item.KitchenShovelItem.setHasOil;
 import static net.minecraft.world.entity.LivingEntity.getSlotForHand;
 
 public class StoveBlock extends HorizontalDirectionalBlock {
@@ -160,6 +163,9 @@ public class StoveBlock extends HorizontalDirectionalBlock {
         }
         // 熄灭
         if (state.getValue(LIT) && itemInHand.is(TagMod.EXTINGUISH_STOVE)) {
+            if (itemInHand.is(ModItems.KITCHEN_SHOVEL.get()) && hasOil(itemInHand)) {
+                setHasOil(itemInHand, false);
+            }
             level.setBlockAndUpdate(pos, state.setValue(LIT, false));
             level.playSound(player, pos,
                     SoundEvents.FIRE_EXTINGUISH,

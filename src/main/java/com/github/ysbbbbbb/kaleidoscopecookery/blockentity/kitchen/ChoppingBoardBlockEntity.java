@@ -154,12 +154,8 @@ public class ChoppingBoardBlockEntity extends BaseBlockEntity implements IChoppi
         }
         tag.putInt(MAX_CUT_COUNT, this.maxCutCount);
         tag.putInt(CURRENT_CUT_COUNT, this.currentCutCount);
-        if (!this.currentCutStack.isEmpty()) {
-            tag.put(CURRENT_CUT_STACK, this.currentCutStack.save(registries));
-        }
-        if (!this.result.isEmpty()) {
-            tag.put(RESULT_ITEM, this.result.save(registries));
-        }
+        tag.put(CURRENT_CUT_STACK, this.currentCutStack.saveOptional(registries));
+        tag.put(RESULT_ITEM, this.result.saveOptional(registries));
     }
 
     @Override

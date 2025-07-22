@@ -5,22 +5,22 @@
   },
   "ingredients": [
     {
-      "tag": "forge:crops/chilipepper"
+      "tag": "c:crops/chilipepper"
     },
     {
-      "tag": "forge:crops/chilipepper"
+      "tag": "c:crops/chilipepper"
     },
     {
-      "tag": "forge:raw_chicken"
+      "tag": "c:raw_chicken"
     },
     {
-      "tag": "forge:raw_chicken"
+      "tag": "c:raw_chicken"
     },
     {
-      "tag": "forge:raw_chicken"
+      "tag": "c:raw_chicken"
     },
     {
-      "tag": "forge:raw_chicken"
+      "tag": "c:raw_chicken"
     },
     {
       "item": "minecraft:blaze_powder"

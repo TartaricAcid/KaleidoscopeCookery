@@ -36,7 +36,7 @@ public class FruitBasketItem extends BlockItem {
     }
 
     public record ItemContainer(ItemStackHandler items) {
-        public static final Codec<ItemContainer> CODEC = ItemStack.CODEC.listOf().xmap(
+        public static final Codec<ItemContainer> CODEC = ItemStack.OPTIONAL_CODEC.listOf().xmap(
                 list -> {
                     ItemStackHandler handler = new ItemStackHandler(8);
                     for (int i = 0; i < Math.min(list.size(), handler.getSlots()); i++) {

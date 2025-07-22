@@ -1,16 +1,15 @@
 package com.github.ysbbbbbb.kaleidoscopecookery.blockentity.decoration;
 
+import com.github.ysbbbbbb.kaleidoscopecookery.blockentity.BaseBlockEntity;
 import com.github.ysbbbbbb.kaleidoscopecookery.init.ModBlocks;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.nbt.CompoundTag;
-import net.minecraft.network.protocol.game.ClientboundBlockEntityDataPacket;
 import net.minecraft.world.item.DyeColor;
-import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.neoforged.neoforge.items.ItemStackHandler;
 
-public class TableBlockEntity extends BlockEntity {
+public class TableBlockEntity extends BaseBlockEntity {
     private static final String COLOR_TAG = "CarpetColor";
     private static final String SHOW_ITEMS = "ShowItems";
 
@@ -37,16 +36,6 @@ public class TableBlockEntity extends BlockEntity {
         if (tag.contains(SHOW_ITEMS)) {
             this.items.deserializeNBT(registries, tag.getCompound(SHOW_ITEMS));
         }
-    }
-
-    @Override
-    public CompoundTag getUpdateTag(HolderLookup.Provider registries) {
-        return super.getUpdateTag(registries);
-    }
-
-    @Override
-    public ClientboundBlockEntityDataPacket getUpdatePacket() {
-        return ClientboundBlockEntityDataPacket.create(this);
     }
 
     public DyeColor getColor() {

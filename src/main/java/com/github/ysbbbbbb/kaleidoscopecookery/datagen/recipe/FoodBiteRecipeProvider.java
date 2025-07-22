@@ -71,13 +71,13 @@ public class FoodBiteRecipeProvider extends ModRecipeProvider {
                 .save(consumer, "braised_fish_cod_salmon");
 
         PotRecipeBuilder.builder()
-                .addInput(TagCommon.RAW_FISHES_COD)
+                .addInput(TagCommon.RAW_FISHES_COD, TagCommon.CROPS_CHILI_PEPPER)
                 .setCarrier(ModItems.COOKED_RICE.get())
                 .setResult(ModItems.BRAISED_FISH_RICE_BOWL.get())
                 .save(consumer, "braised_fish_cod_with_rice");
 
         PotRecipeBuilder.builder()
-                .addInput(TagCommon.RAW_FISHES_SALMON)
+                .addInput(TagCommon.RAW_FISHES_SALMON, TagCommon.CROPS_CHILI_PEPPER)
                 .setCarrier(ModItems.COOKED_RICE.get())
                 .setResult(ModItems.BRAISED_FISH_RICE_BOWL.get())
                 .save(consumer, "braised_fish_salmon_with_rice");

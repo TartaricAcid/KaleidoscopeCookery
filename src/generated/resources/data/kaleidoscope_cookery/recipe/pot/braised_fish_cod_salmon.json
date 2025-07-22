@@ -5,10 +5,10 @@
   },
   "ingredients": [
     {
-      "tag": "forge:raw_fishes/cod"
+      "tag": "c:raw_fishes/cod"
     },
     {
-      "tag": "forge:raw_fishes/salmon"
+      "tag": "c:raw_fishes/salmon"
     }
   ],
   "result": {

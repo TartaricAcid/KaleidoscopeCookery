@@ -98,7 +98,7 @@ public class TableBlock extends Block implements SimpleWaterloggedBlock, EntityB
             level.playSound(player, pos, SoundEvents.ITEM_FRAME_REMOVE_ITEM, player.getSoundSource(), 1.0F, 1.0F);
             BlockDrop.popResource(level, pos, 0.75, tableItem.copy());
             tableItems.setStackInSlot(tableIndex, ItemStack.EMPTY);
-            table.setChanged();
+            table.refresh();
             return ItemInteractionResult.SUCCESS;
         }
 
@@ -110,7 +110,7 @@ public class TableBlock extends Block implements SimpleWaterloggedBlock, EntityB
             } else {
                 tableItems.setStackInSlot(tableIndex + 1, split);
             }
-            table.setChanged();
+            table.refresh();
             level.playSound(player, pos, SoundEvents.ITEM_FRAME_ADD_ITEM, player.getSoundSource(), 1.0F, 1.0F);
             return ItemInteractionResult.SUCCESS;
         }
@@ -132,7 +132,7 @@ public class TableBlock extends Block implements SimpleWaterloggedBlock, EntityB
             if (level.getBlockEntity(pos) instanceof TableBlockEntity tableBlockEntity) {
                 level.playSound(null, pos, SoundType.WOOL.getPlaceSound(), player.getSoundSource(), 1.0F, 1.0F);
                 tableBlockEntity.setColor(dyeColor);
-                tableBlockEntity.setChanged();
+                tableBlockEntity.refresh();
                 itemInHand.shrink(1);
                 return ItemInteractionResult.SUCCESS;
             }
@@ -147,7 +147,7 @@ public class TableBlock extends Block implements SimpleWaterloggedBlock, EntityB
             level.playSound(null, pos, SoundType.WOOL.getPlaceSound(), player.getSoundSource(), 1.0F, 1.0F);
 
             tableBlockEntity.setColor(dyeColor);
-            tableBlockEntity.setChanged();
+            tableBlockEntity.refresh();
             level.setBlockAndUpdate(pos, state.setValue(HAS_CARPET, true));
             itemInHand.shrink(1);
             return ItemInteractionResult.SUCCESS;

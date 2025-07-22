@@ -11,13 +11,13 @@
       "tag": "c:mushrooms"
     },
     {
-      "tag": "forge:raw_pork"
+      "tag": "c:raw_pork"
     },
     {
-      "tag": "forge:raw_pork"
+      "tag": "c:raw_pork"
     },
     {
-      "tag": "forge:crops/chilipepper"
+      "tag": "c:crops/chilipepper"
     }
   ],
   "result": {

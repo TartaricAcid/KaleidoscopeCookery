@@ -161,12 +161,8 @@ public class ShawarmaSpitBlockEntity extends BaseBlockEntity implements IShawarm
     @Override
     protected void saveAdditional(CompoundTag tag, HolderLookup.Provider registries) {
         super.saveAdditional(tag, registries);
-        if (!this.cookingItem.isEmpty()) {
-            tag.put(COOKING_ITEM, this.cookingItem.save(registries));
-        }
-        if (!this.cookedItem.isEmpty()) {
-            tag.put(COOKED_ITEM, this.cookedItem.save(registries));
-        }
+        tag.put(COOKING_ITEM, this.cookingItem.saveOptional(registries));
+        tag.put(COOKED_ITEM, this.cookedItem.saveOptional(registries));
         tag.putInt(COOK_TIME, this.cookTime);
     }
 

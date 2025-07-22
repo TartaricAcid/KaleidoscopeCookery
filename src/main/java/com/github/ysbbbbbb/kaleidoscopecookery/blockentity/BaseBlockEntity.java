@@ -18,7 +18,7 @@ public abstract class BaseBlockEntity extends BlockEntity {
         super(entityType, pos, state);
     }
 
-    protected void refresh() {
+    public void refresh() {
         this.setChanged();
         if (level != null) {
             BlockState state = level.getBlockState(worldPosition);

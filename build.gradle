@@ -21,11 +21,21 @@ neoForge {
         client {
             client()
             systemProperty 'neoforge.enabledGameTestNamespaces', project.mod_id
+            gameDirectory = project.file('run/client')
+        }
+        client2 {
+            client()
+            systemProperty 'neoforge.enabledGameTestNamespaces', project.mod_id
+            programArguments = [
+                    "--username", "tartaric_acid"
+            ]
+            gameDirectory = project.file('run/client2')
         }
         server {
             server()
-            programArgument '--nogui'
+            //programArgument '--nogui'
             systemProperty 'neoforge.enabledGameTestNamespaces', project.mod_id
+            gameDirectory = project.file('run/server')
         }
         gameTestServer {
             type = "gameTestServer"

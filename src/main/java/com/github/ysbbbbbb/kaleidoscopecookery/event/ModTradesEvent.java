@@ -3,15 +3,27 @@ package com.github.ysbbbbbb.kaleidoscopecookery.event;
 import com.github.ysbbbbbb.kaleidoscopecookery.KaleidoscopeCookery;
 import com.github.ysbbbbbb.kaleidoscopecookery.init.ModVillager;
 import com.github.ysbbbbbb.kaleidoscopecookery.init.registry.FoodBiteRegistry;
+import net.minecraft.core.HolderSet;
+import net.minecraft.core.RegistryAccess;
 import net.minecraft.core.registries.Registries;
+import net.minecraft.tags.EnchantmentTags;
+import net.minecraft.util.RandomSource;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.npc.VillagerTrades;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.enchantment.Enchantments;
+import net.minecraft.world.item.Items;
+import net.minecraft.world.item.enchantment.Enchantment;
+import net.minecraft.world.item.enchantment.EnchantmentHelper;
+import net.minecraft.world.item.trading.ItemCost;
+import net.minecraft.world.item.trading.MerchantOffer;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.common.BasicItemListing;
 import net.neoforged.neoforge.event.village.VillagerTradesEvent;
 import net.neoforged.neoforge.registries.DeferredItem;
+
+import java.util.Optional;
 
 import static com.github.ysbbbbbb.kaleidoscopecookery.init.ModItems.*;
 import static net.minecraft.world.item.Items.EMERALD;
@@ -32,6 +44,8 @@ public class ModTradesEvent {
     // 新手交易（等级1）
     private static void addNoviceTrades(VillagerTradesEvent event) {
         addTrade(event, 1, TOMATO.get(), 12, EMERALD, 1, 16, 2, 0.05f);
+        addTrade(event, 1, LETTUCE.get(), 16, EMERALD, 1, 16, 2, 0.05f);
+        addTrade(event, 1, RICE_SEED.get(), 20, EMERALD, 1, 16, 2, 0.05f);
         addTrade(event, 1, RED_CHILI.get(), 12, EMERALD, 1, 16, 2, 0.05f);
         addTrade(event, 1, GREEN_CHILI.get(), 8, EMERALD, 1, 12, 2, 0.1f);
         addTrade(event, 1, CATERPILLAR.get(), 1, EMERALD, 1, 12, 2, 0.1f);
@@ -68,11 +82,7 @@ public class ModTradesEvent {
 
     // 大师交易（等级5）
     private static void addMasterTrades(VillagerTradesEvent event) {
-        var lookup = event.getRegistryAccess().lookupOrThrow(Registries.ENCHANTMENT);
-        ItemStack enchantedDiamondKnife = new ItemStack(DIAMOND_KITCHEN_KNIFE.get());
-        enchantedDiamondKnife.enchant(lookup.getOrThrow(Enchantments.UNBREAKING), 3);
-        enchantedDiamondKnife.enchant(lookup.getOrThrow(Enchantments.SHARPNESS), 2);
-        addTrade(event, 5, EMERALD, 35, enchantedDiamondKnife, 1, 5, 0, 0.2f);
+        event.getTrades().get(5).add(new EnchantedItemForEmeralds(DIAMOND_KITCHEN_KNIFE.get(), 8, 3, 30, 0.2F));
     }
 
     // 辅助方法：添加交易的通用方法
@@ -97,5 +107,33 @@ public class ModTradesEvent {
             return itemStack.copyWithCount(count);
         }
         throw new IllegalArgumentException("Unsupported item type: " + item.getClass());
+    }
+
+    private static class EnchantedItemForEmeralds implements VillagerTrades.ItemListing {
+        private final ItemStack itemStack;
+        private final int baseEmeraldCost;
+        private final int maxUses;
+        private final int villagerXp;
+        private final float priceMultiplier;
+
+        public EnchantedItemForEmeralds(Item item, int baseEmeraldCost, int maxUses, int villagerXp, float priceMultiplier) {
+            this.itemStack = new ItemStack(item);
+            this.baseEmeraldCost = baseEmeraldCost;
+            this.maxUses = maxUses;
+            this.villagerXp = villagerXp;
+            this.priceMultiplier = priceMultiplier;
+        }
+
+        @Override
+        public MerchantOffer getOffer(Entity trader, RandomSource random) {
+            int i = 5 + random.nextInt(15);
+            RegistryAccess registryaccess = trader.level().registryAccess();
+            Optional<HolderSet.Named<Enchantment>> optional = registryaccess.registryOrThrow(Registries.ENCHANTMENT)
+                    .getTag(EnchantmentTags.ON_TRADED_EQUIPMENT);
+            ItemStack itemstack = EnchantmentHelper.enchantItem(random, new ItemStack(this.itemStack.getItem()), i, registryaccess, optional);
+            int j = Math.min(this.baseEmeraldCost + i, 64);
+            ItemCost itemcost = new ItemCost(Items.EMERALD, j);
+            return new MerchantOffer(itemcost, itemstack, this.maxUses, this.villagerXp, this.priceMultiplier);
+        }
     }
 }

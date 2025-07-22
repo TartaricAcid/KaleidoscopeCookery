@@ -11,13 +11,13 @@
       "item": "kaleidoscope_cookery:raw_cow_offal"
     },
     {
-      "tag": "forge:crops/chilipepper"
+      "tag": "c:crops/chilipepper"
     },
     {
-      "tag": "forge:crops/lettuce"
+      "tag": "c:crops/lettuce"
     },
     {
-      "tag": "forge:crops/lettuce"
+      "tag": "c:crops/lettuce"
     }
   ],
   "result": {

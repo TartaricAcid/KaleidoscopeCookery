@@ -49,6 +49,15 @@ public class KitchenShovelItem extends ShovelItem {
     }
 
     @Override
+    public InteractionResult useOn(UseOnContext context) {
+        InteractionResult result = super.useOn(context);
+        if (result.indicateItemUse()  && hasOil(context.getItemInHand())) {
+            setHasOil(context.getItemInHand(), false);
+        }
+        return result;
+    }
+
+    @Override
     public InteractionResult onItemUseFirst(ItemStack stack, UseOnContext context) {
         BlockPos clickedPos = context.getClickedPos();
         Level level = context.getLevel();
