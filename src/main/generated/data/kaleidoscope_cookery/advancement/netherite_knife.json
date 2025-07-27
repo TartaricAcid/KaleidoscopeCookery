@@ -1,0 +1,35 @@
+{
+  "parent": "kaleidoscope_cookery:iron_knife",
+  "criteria": {
+    "has_netherite_knife": {
+      "conditions": {
+        "items": [
+          {
+            "items": "kaleidoscope_cookery:netherite_kitchen_knife"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "background": "kaleidoscope_cookery:textures/advancement/background.png",
+    "description": {
+      "translate": "advancements.kaleidoscope_cookery.netherite_knife.description"
+    },
+    "frame": "goal",
+    "icon": {
+      "count": 1,
+      "id": "kaleidoscope_cookery:netherite_kitchen_knife"
+    },
+    "title": {
+      "translate": "advancements.kaleidoscope_cookery.netherite_knife.title"
+    }
+  },
+  "requirements": [
+    [
+      "has_netherite_knife"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

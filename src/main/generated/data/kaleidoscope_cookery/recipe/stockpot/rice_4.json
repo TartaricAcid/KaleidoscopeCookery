@@ -1,0 +1,24 @@
+{
+  "type": "kaleidoscope_cookery:stockpot",
+  "finished_bubble_color": 15328219,
+  "finished_texture": "kaleidoscope_cookery:stockpot/rice_finished",
+  "ingredients": [
+    {
+      "tag": "c:seeds/rice"
+    },
+    {
+      "tag": "c:seeds/rice"
+    },
+    {
+      "tag": "c:seeds/rice"
+    },
+    {
+      "tag": "c:seeds/rice"
+    }
+  ],
+  "result": {
+    "count": 4,
+    "id": "kaleidoscope_cookery:cooked_rice"
+  },
+  "time": 400
+}

@@ -1,0 +1,34 @@
+{
+  "parent": "kaleidoscope_cookery:straw_hat",
+  "criteria": {
+    "has_tomato_seed": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#kaleidoscope_cookery:cookery_mod_seeds"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "background": "kaleidoscope_cookery:textures/advancement/background.png",
+    "description": {
+      "translate": "advancements.kaleidoscope_cookery.tomato_seed.description"
+    },
+    "icon": {
+      "count": 1,
+      "id": "kaleidoscope_cookery:tomato_seed"
+    },
+    "title": {
+      "translate": "advancements.kaleidoscope_cookery.tomato_seed.title"
+    }
+  },
+  "requirements": [
+    [
+      "has_tomato_seed"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

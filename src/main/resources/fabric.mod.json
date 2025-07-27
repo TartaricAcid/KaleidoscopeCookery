@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "id": "kaleidoscope_cookery",
+  "version": "${version}",
+  "name": "Kaleidoscope Cookery",
+  "description": "",
+  "authors": ["ysbb", "tartaric_acid"],
+  "contact": {},
+  "license": "BSD-3-Clause + CC BY-NC-SA 4.0",
+  "environment": "*",
+  "entrypoints": {
+    "main": ["com.github.ysbbbbbb.kaleidoscopecookery.KaleidoscopeCookery"],
+    "client": ["com.github.ysbbbbbb.kaleidoscopecookery.KaleidoscopeCookeryClient"],
+    "fabric-datagen": [
+      "com.github.ysbbbbbb.kaleidoscopecookery.datagen.DataGenerators"
+    ],
+    "jei_mod_plugin": [
+      "com.github.ysbbbbbb.kaleidoscopecookery.compat.jei.ModJeiPlugin"
+    ]
+  },
+  "mixins": ["kaleidoscope_cookery.mixins.json"],
+  "accessWidener": "kaleidoscope_cookery.accesswidener",
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "fabric-api": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}

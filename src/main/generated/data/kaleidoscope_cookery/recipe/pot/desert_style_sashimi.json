@@ -1,0 +1,33 @@
+{
+  "type": "kaleidoscope_cookery:pot",
+  "carrier": {
+    "item": "minecraft:bowl"
+  },
+  "ingredients": [
+    {
+      "tag": "c:raw_fishes/tropical_fish"
+    },
+    {
+      "tag": "c:raw_fishes/tropical_fish"
+    },
+    {
+      "tag": "c:raw_fishes/tropical_fish"
+    },
+    {
+      "tag": "c:raw_fishes/tropical_fish"
+    },
+    {
+      "item": "minecraft:cactus"
+    },
+    {
+      "item": "minecraft:cactus"
+    },
+    {
+      "item": "minecraft:cactus"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "kaleidoscope_cookery:desert_style_sashimi"
+  }
+}

@@ -1,0 +1,160 @@
+{
+  "variants": {
+    "has_lid=false,oil_count=0,waterlogged=false": {
+      "model": "kaleidoscope_cookery:block/enamel_basin/empty"
+    },
+    "has_lid=false,oil_count=0,waterlogged=true": {
+      "model": "kaleidoscope_cookery:block/enamel_basin/empty"
+    },
+    "has_lid=false,oil_count=1,waterlogged=false": {
+      "model": "kaleidoscope_cookery:block/enamel_basin/low"
+    },
+    "has_lid=false,oil_count=1,waterlogged=true": {
+      "model": "kaleidoscope_cookery:block/enamel_basin/low"
+    },
+    "has_lid=false,oil_count=10,waterlogged=false": {
+      "model": "kaleidoscope_cookery:block/enamel_basin/high"
+    },
+    "has_lid=false,oil_count=10,waterlogged=true": {
+      "model": "kaleidoscope_cookery:block/enamel_basin/high"
+    },
+    "has_lid=false,oil_count=11,waterlogged=false": {
+      "model": "kaleidoscope_cookery:block/enamel_basin/high"
+    },
+    "has_lid=false,oil_count=11,waterlogged=true": {
+      "model": "kaleidoscope_cookery:block/enamel_basin/high"
+    },
+    "has_lid=false,oil_count=12,waterlogged=false": {
+      "model": "kaleidoscope_cookery:block/enamel_basin/high"
+    },
+    "has_lid=false,oil_count=12,waterlogged=true": {
+      "model": "kaleidoscope_cookery:block/enamel_basin/high"
+    },
+    "has_lid=false,oil_count=2,waterlogged=false": {
+      "model": "kaleidoscope_cookery:block/enamel_basin/low"
+    },
+    "has_lid=false,oil_count=2,waterlogged=true": {
+      "model": "kaleidoscope_cookery:block/enamel_basin/low"
+    },
+    "has_lid=false,oil_count=3,waterlogged=false": {
+      "model": "kaleidoscope_cookery:block/enamel_basin/low"
+    },
+    "has_lid=false,oil_count=3,waterlogged=true": {
+      "model": "kaleidoscope_cookery:block/enamel_basin/low"
+    },
+    "has_lid=false,oil_count=4,waterlogged=false": {
+      "model": "kaleidoscope_cookery:block/enamel_basin/low"
+    },
+    "has_lid=false,oil_count=4,waterlogged=true": {
+      "model": "kaleidoscope_cookery:block/enamel_basin/low"
+    },
+    "has_lid=false,oil_count=5,waterlogged=false": {
+      "model": "kaleidoscope_cookery:block/enamel_basin/middle"
+    },
+    "has_lid=false,oil_count=5,waterlogged=true": {
+      "model": "kaleidoscope_cookery:block/enamel_basin/middle"
+    },
+    "has_lid=false,oil_count=6,waterlogged=false": {
+      "model": "kaleidoscope_cookery:block/enamel_basin/middle"
+    },
+    "has_lid=false,oil_count=6,waterlogged=true": {
+      "model": "kaleidoscope_cookery:block/enamel_basin/middle"
+    },
+    "has_lid=false,oil_count=7,waterlogged=false": {
+      "model": "kaleidoscope_cookery:block/enamel_basin/middle"
+    },
+    "has_lid=false,oil_count=7,waterlogged=true": {
+      "model": "kaleidoscope_cookery:block/enamel_basin/middle"
+    },
+    "has_lid=false,oil_count=8,waterlogged=false": {
+      "model": "kaleidoscope_cookery:block/enamel_basin/middle"
+    },
+    "has_lid=false,oil_count=8,waterlogged=true": {
+      "model": "kaleidoscope_cookery:block/enamel_basin/middle"
+    },
+    "has_lid=false,oil_count=9,waterlogged=false": {
+      "model": "kaleidoscope_cookery:block/enamel_basin/high"
+    },
+    "has_lid=false,oil_count=9,waterlogged=true": {
+      "model": "kaleidoscope_cookery:block/enamel_basin/high"
+    },
+    "has_lid=true,oil_count=0,waterlogged=false": {
+      "model": "kaleidoscope_cookery:block/enamel_basin/base"
+    },
+    "has_lid=true,oil_count=0,waterlogged=true": {
+      "model": "kaleidoscope_cookery:block/enamel_basin/base"
+    },
+    "has_lid=true,oil_count=1,waterlogged=false": {
+      "model": "kaleidoscope_cookery:block/enamel_basin/base"
+    },
+    "has_lid=true,oil_count=1,waterlogged=true": {
+      "model": "kaleidoscope_cookery:block/enamel_basin/base"
+    },
+    "has_lid=true,oil_count=10,waterlogged=false": {
+      "model": "kaleidoscope_cookery:block/enamel_basin/base"
+    },
+    "has_lid=true,oil_count=10,waterlogged=true": {
+      "model": "kaleidoscope_cookery:block/enamel_basin/base"
+    },
+    "has_lid=true,oil_count=11,waterlogged=false": {
+      "model": "kaleidoscope_cookery:block/enamel_basin/base"
+    },
+    "has_lid=true,oil_count=11,waterlogged=true": {
+      "model": "kaleidoscope_cookery:block/enamel_basin/base"
+    },
+    "has_lid=true,oil_count=12,waterlogged=false": {
+      "model": "kaleidoscope_cookery:block/enamel_basin/base"
+    },
+    "has_lid=true,oil_count=12,waterlogged=true": {
+      "model": "kaleidoscope_cookery:block/enamel_basin/base"
+    },
+    "has_lid=true,oil_count=2,waterlogged=false": {
+      "model": "kaleidoscope_cookery:block/enamel_basin/base"
+    },
+    "has_lid=true,oil_count=2,waterlogged=true": {
+      "model": "kaleidoscope_cookery:block/enamel_basin/base"
+    },
+    "has_lid=true,oil_count=3,waterlogged=false": {
+      "model": "kaleidoscope_cookery:block/enamel_basin/base"
+    },
+    "has_lid=true,oil_count=3,waterlogged=true": {
+      "model": "kaleidoscope_cookery:block/enamel_basin/base"
+    },
+    "has_lid=true,oil_count=4,waterlogged=false": {
+      "model": "kaleidoscope_cookery:block/enamel_basin/base"
+    },
+    "has_lid=true,oil_count=4,waterlogged=true": {
+      "model": "kaleidoscope_cookery:block/enamel_basin/base"
+    },
+    "has_lid=true,oil_count=5,waterlogged=false": {
+      "model": "kaleidoscope_cookery:block/enamel_basin/base"
+    },
+    "has_lid=true,oil_count=5,waterlogged=true": {
+      "model": "kaleidoscope_cookery:block/enamel_basin/base"
+    },
+    "has_lid=true,oil_count=6,waterlogged=false": {
+      "model": "kaleidoscope_cookery:block/enamel_basin/base"
+    },
+    "has_lid=true,oil_count=6,waterlogged=true": {
+      "model": "kaleidoscope_cookery:block/enamel_basin/base"
+    },
+    "has_lid=true,oil_count=7,waterlogged=false": {
+      "model": "kaleidoscope_cookery:block/enamel_basin/base"
+    },
+    "has_lid=true,oil_count=7,waterlogged=true": {
+      "model": "kaleidoscope_cookery:block/enamel_basin/base"
+    },
+    "has_lid=true,oil_count=8,waterlogged=false": {
+      "model": "kaleidoscope_cookery:block/enamel_basin/base"
+    },
+    "has_lid=true,oil_count=8,waterlogged=true": {
+      "model": "kaleidoscope_cookery:block/enamel_basin/base"
+    },
+    "has_lid=true,oil_count=9,waterlogged=false": {
+      "model": "kaleidoscope_cookery:block/enamel_basin/base"
+    },
+    "has_lid=true,oil_count=9,waterlogged=true": {
+      "model": "kaleidoscope_cookery:block/enamel_basin/base"
+    }
+  }
+}
