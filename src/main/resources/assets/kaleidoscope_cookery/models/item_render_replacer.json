@@ -1,0 +1,11 @@
+{
+  "pot": {
+    "kaleidoscope_cookery:cooked_rice": "kaleidoscope_cookery:rice"
+  },
+  "stockpot_cooking": {
+    "kaleidoscope_cookery:cooked_rice": "kaleidoscope_cookery:rice"
+  },
+  "stockpot_finished": {
+    "kaleidoscope_cookery:cooked_rice": "kaleidoscope_cookery:rice"
+  }
+}

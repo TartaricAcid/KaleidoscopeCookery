@@ -1,0 +1,29 @@
+{
+  "block.paddy": {
+    "sounds": [
+      "kaleidoscope_cookery:block/paddy/paddy_0",
+      "kaleidoscope_cookery:block/paddy/paddy_1"
+    ],
+    "subtitle": "subtitles.kaleidoscope_cookery.block.paddy"
+  },
+  "block.stockpot": {
+    "sounds": [
+      "kaleidoscope_cookery:block/stockpot/stockpot_0",
+      "kaleidoscope_cookery:block/stockpot/stockpot_1",
+      "kaleidoscope_cookery:block/stockpot/stockpot_2",
+      "kaleidoscope_cookery:block/stockpot/stockpot_3",
+      "kaleidoscope_cookery:block/stockpot/stockpot_4",
+      "kaleidoscope_cookery:block/stockpot/stockpot_5",
+      "kaleidoscope_cookery:block/stockpot/stockpot_6"
+    ],
+    "subtitle": "subtitles.kaleidoscope_cookery.block.stockpot"
+  },
+  "entity.fart": {
+    "sounds": [
+      "kaleidoscope_cookery:entity/fart/fart_0",
+      "kaleidoscope_cookery:entity/fart/fart_1",
+      "kaleidoscope_cookery:entity/fart/fart_2"
+    ],
+    "subtitle": "subtitles.kaleidoscope_cookery.entity.fart"
+  }
+}
