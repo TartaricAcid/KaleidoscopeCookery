@@ -115,11 +115,20 @@ repositories {
             includeGroup "com.github.rtyley"
         }
     }
+    maven {
+        name = "TerraformersMC"
+        url = "https://maven.terraformersmc.com/"
+    }
 }
 
 dependencies {
+    // JEI
     compileOnly("mezz.jei:jei-1.21.1-neoforge-api:19.21.0.247")
     runtimeOnly("mezz.jei:jei-1.21.1-neoforge:19.21.0.247")
+
+    // EMI
+    compileOnly "dev.emi:emi-neoforge:1.1.22+1.21.1:api"
+    implementation "dev.emi:emi-neoforge:1.1.22+1.21.1"
 
     implementation "maven.modrinth:jade:15.0.5+neoforge"
 
