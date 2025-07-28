@@ -141,7 +141,7 @@
   "item.kaleidoscope_cookery.cooked_pork_belly": "Cooked Pork Belly",
   "item.kaleidoscope_cookery.stockpot_lid": "Stockpot Lid",
   "item.kaleidoscope_cookery.cooked_rice": "Cooked Rice",
-  "entity.minecraft.villager.kaleidoscope_cookery.chef": "Chef",
+  "entity.minecraft.villager.chef": "Chef",
   "entity.kaleidoscope_cookery.scarecrow": "Scarecrow",
   "tooltip.kaleidoscope_cookery.stove": "The heat source block of the kitchen utensils, lit with flint and steel",
   "tooltip.kaleidoscope_cookery.item_container.empty": "Empty",

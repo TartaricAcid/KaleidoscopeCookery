@@ -141,7 +141,7 @@
   "item.kaleidoscope_cookery.cooked_pork_belly": "熟五花肉",
   "item.kaleidoscope_cookery.stockpot_lid": "汤锅盖",
   "item.kaleidoscope_cookery.cooked_rice": "米饭",
-  "entity.minecraft.villager.kaleidoscope_cookery.chef": "烹饪师",
+  "entity.minecraft.villager.chef": "烹饪师",
   "entity.kaleidoscope_cookery.scarecrow": "稻草人",
   "tooltip.kaleidoscope_cookery.stove": "厨房用具的热源方块，使用打火石点燃",
   "tooltip.kaleidoscope_cookery.item_container.empty": "空无一物",
