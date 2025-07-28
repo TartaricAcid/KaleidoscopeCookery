@@ -1,33 +1,22 @@
 package com.github.ysbbbbbb.kaleidoscopecookery.init;
 
 import com.github.ysbbbbbb.kaleidoscopecookery.KaleidoscopeCookery;
-import com.google.common.collect.ImmutableSet;
-import net.minecraft.core.Registry;
-import net.minecraft.core.registries.BuiltInRegistries;
+import net.fabricmc.fabric.api.object.builder.v1.world.poi.PointOfInterestHelper;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.ai.village.poi.PoiType;
+import net.minecraft.world.level.block.Block;
 
 public class ModPoi {
-    public static final PoiType STOVE = new PoiType(ImmutableSet.copyOf(
-            ModBlocks.STOVE.getStateDefinition().getPossibleStates()
-    ), 1, 1);
+    public static final PoiType STOVE = registerPoiType("stove", ModBlocks.STOVE);
+    public static final PoiType POT = registerPoiType("pot", ModBlocks.POT);
+    public static final PoiType STOCKPOT = registerPoiType("stockpot", ModBlocks.STOCKPOT);
+    public static final PoiType CHOPPING_BOARD = registerPoiType("chopping_board", ModBlocks.CHOPPING_BOARD);
 
-    public static final PoiType POT = new PoiType(ImmutableSet.copyOf(
-            ModBlocks.POT.getStateDefinition().getPossibleStates()
-    ), 1, 1);
-
-    public static final PoiType STOCKPOT = new PoiType(ImmutableSet.copyOf(
-            ModBlocks.STOCKPOT.getStateDefinition().getPossibleStates()
-    ), 1, 1);
-
-    public static final PoiType CHOPPING_BOARD = new PoiType(ImmutableSet.copyOf(
-            ModBlocks.CHOPPING_BOARD.getStateDefinition().getPossibleStates()
-    ), 1, 1);
+    private static PoiType registerPoiType(String name, Block block) {
+        return PointOfInterestHelper.register(new ResourceLocation(KaleidoscopeCookery.MOD_ID, name), 1, 1, block);
+    }
 
     public static void registerPoiTypes() {
-        Registry.register(BuiltInRegistries.POINT_OF_INTEREST_TYPE, new ResourceLocation(KaleidoscopeCookery.MOD_ID, "stove"), STOVE);
-        Registry.register(BuiltInRegistries.POINT_OF_INTEREST_TYPE, new ResourceLocation(KaleidoscopeCookery.MOD_ID, "pot"), POT);
-        Registry.register(BuiltInRegistries.POINT_OF_INTEREST_TYPE, new ResourceLocation(KaleidoscopeCookery.MOD_ID, "stockpot"), STOCKPOT);
-        Registry.register(BuiltInRegistries.POINT_OF_INTEREST_TYPE, new ResourceLocation(KaleidoscopeCookery.MOD_ID, "chopping_board"), CHOPPING_BOARD);
+        // 确保类被加载
     }
 }
