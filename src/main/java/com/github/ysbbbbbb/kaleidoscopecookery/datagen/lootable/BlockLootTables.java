@@ -8,18 +8,13 @@ import com.github.ysbbbbbb.kaleidoscopecookery.block.misc.ChiliRistraBlock;
 import com.github.ysbbbbbb.kaleidoscopecookery.init.ModBlocks;
 import com.github.ysbbbbbb.kaleidoscopecookery.init.ModItems;
 import com.github.ysbbbbbb.kaleidoscopecookery.init.registry.FoodBiteRegistry;
-import com.github.ysbbbbbb.kaleidoscopecookery.init.tag.TagMod;
-import com.github.ysbbbbbb.kaleidoscopecookery.loot.AdvanceBlockMatchTool;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootTableProvider;
-import net.minecraft.advancements.critereon.ItemPredicate;
 import net.minecraft.advancements.critereon.StatePropertiesPredicate;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
-import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.enchantment.Enchantment;
@@ -43,7 +38,6 @@ import net.minecraft.world.level.storage.loot.providers.number.ConstantValue;
 import net.minecraft.world.level.storage.loot.providers.number.UniformGenerator;
 
 import java.util.concurrent.CompletableFuture;
-import java.util.function.BiConsumer;
 
 public class BlockLootTables extends FabricBlockLootTableProvider {
     public final HolderLookup.RegistryLookup<Enchantment> enchantment;
@@ -183,29 +177,6 @@ public class BlockLootTables extends FabricBlockLootTableProvider {
         return LootItemBlockStatePropertyCondition
                 .hasBlockStateProperties(ModBlocks.RICE_CROP)
                 .setProperties(property);
-    }
-
-    @Override
-    public void generate(BiConsumer<ResourceKey<LootTable>, LootTable.Builder> output) {
-        super.generate(output);
-
-        // 穿戴草帽掉落番茄辣椒等种子
-        var tomato = getSeed(ModItems.TOMATO_SEED);
-        var chili = getSeed(ModItems.CHILI_SEED);
-        var lettuce = getSeed(ModItems.LETTUCE_SEED);
-        var rice = getSeed(ModItems.WILD_RICE_SEED);
-        LootTable.Builder dropSeed = LootTable.lootTable().withPool(LootPool.lootPool().setRolls(ConstantValue.exactly(1))
-                .add(tomato).add(chili).add(lettuce).add(rice));
-        ResourceKey<LootTable> id = ResourceKey.create(Registries.LOOT_TABLE, modLoc("straw_hat_seed_drop"));
-        output.accept(id, dropSeed);
-    }
-
-    private LootPoolSingletonContainer.Builder<?> getSeed(ItemLike item) {
-        ItemPredicate hasHat = ItemPredicate.Builder.item().of(TagMod.STRAW_HAT).build();
-        LootItemCondition.Builder hatMatches = AdvanceBlockMatchTool.toolMatches(EquipmentSlot.HEAD, hasHat);
-        return LootItem.lootTableItem(item)
-                .when(LootItemRandomChanceCondition.randomChance(0.125F)).when(hatMatches)
-                .apply(ApplyBonusCount.addUniformBonusCount(enchantment.getOrThrow(Enchantments.FORTUNE), 2));
     }
 
     private void dropFoodBite(ResourceLocation id, FoodBiteRegistry.FoodData data) {

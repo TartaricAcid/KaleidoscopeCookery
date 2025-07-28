@@ -28,7 +28,7 @@ public class OilBlock extends Block {
         return false;
     }
 
-    // TODO: 缺少支持火焰燃烧、粘液块不能带动
+    // TODO: 缺少粘液块不能带动
 
     @Override
     public void animateTick(BlockState state, Level level, BlockPos pos, RandomSource random) {
