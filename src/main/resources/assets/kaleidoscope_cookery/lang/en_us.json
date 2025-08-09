@@ -83,7 +83,7 @@
   "effect.kaleidoscope_cookery.flatulence.description": "Sneak to fart, and gain ejection effect.",
   "effect.kaleidoscope_cookery.tundra_strider.description": "Move faster on snow, ice, and powder snow, and do not sink into powder snow.",
   "effect.kaleidoscope_cookery.warmth.description": "Slowly regenerate health when near heat sources such as stoves, campfires, lava etc.",
-  "effect.kaleidoscope_cookery.satiated_shield.description": "Saturation acts as extra health; damage is absorbed by saturation first.",
+  "effect.kaleidoscope_cookery.satiated_shield.description": "Hunger value acts as extra health; damage is absorbed by hunger value first.",
   "effect.kaleidoscope_cookery.vigor.description": "Running does not consume hunger.",
   "effect.kaleidoscope_cookery.sulfur.description": "Phantoms will flee from you.",
   "effect.kaleidoscope_cookery.mustard.description": "Creepers nearby will flee from you.",
