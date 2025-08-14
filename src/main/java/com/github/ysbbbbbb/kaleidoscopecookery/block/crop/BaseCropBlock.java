@@ -56,9 +56,8 @@ public class BaseCropBlock extends CropBlock {
         return super.useWithoutItem(state, level, pos, player, hitResult);
     }
 
-    protected void onUseBreakCrop(Level level, BlockPos pos) {
+    protected void onUseBreakCrop(Level level, BlockPos pos, int ageAfterUse) {
         // 默认右键收割后为第五阶段
-        int ageAfterUse = 5;
         level.playSound(null,
                 pos.getX() + 0.5,
                 pos.getY() + 0.5,
@@ -67,6 +66,11 @@ public class BaseCropBlock extends CropBlock {
                 SoundSource.BLOCKS,
                 1.0F, 1.0F);
         level.setBlock(pos, this.getStateForAge(ageAfterUse), Block.UPDATE_CLIENTS);
+    }
+
+    protected void onUseBreakCrop(Level level, BlockPos pos) {
+        // 默认右键收割后为第五阶段
+        this.onUseBreakCrop(level, pos, 5);
     }
 
     @Override
