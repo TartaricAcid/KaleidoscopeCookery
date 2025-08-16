@@ -61,7 +61,7 @@ public class TableBlock extends Block implements SimpleWaterloggedBlock, EntityB
         super(Properties.of()
                 .mapColor(MapColor.WOOD)
                 .instrument(NoteBlockInstrument.BASS)
-                .strength(2.0F, 3.0F)
+                    .strength(2.0F, 3.0F)
                 .sound(SoundType.WOOD)
                 .noOcclusion()
                 .ignitedByLava());
@@ -201,13 +201,13 @@ public class TableBlock extends Block implements SimpleWaterloggedBlock, EntityB
         }
         BlockState westState = levelAccessor.getBlockState(pos.west());
         BlockState eastState = levelAccessor.getBlockState(pos.east());
-        if (eastState.is(this) && westState.is(this)) {
+        if (checkIfShouldLink(eastState, Direction.Axis.Z) && checkIfShouldLink(westState, Direction.Axis.Z)) {
             return baseState.setValue(POSITION, MIDDLE).setValue(AXIS, Direction.Axis.X);
         }
-        if (eastState.is(this) && !westState.is(this)) {
+        if (checkIfShouldLink(eastState, Direction.Axis.Z) && !checkIfShouldLink(westState, Direction.Axis.Z)) {
             return baseState.setValue(POSITION, LEFT).setValue(AXIS, Direction.Axis.X);
         }
-        if (!eastState.is(this) && westState.is(this)) {
+        if (!checkIfShouldLink(eastState, Direction.Axis.Z) && checkIfShouldLink(westState, Direction.Axis.Z)) {
             return baseState.setValue(POSITION, RIGHT).setValue(AXIS, Direction.Axis.X);
         }
         return baseState.setValue(POSITION, SINGLE);
@@ -220,16 +220,28 @@ public class TableBlock extends Block implements SimpleWaterloggedBlock, EntityB
         }
         BlockState northState = levelAccessor.getBlockState(pos.north());
         BlockState southState = levelAccessor.getBlockState(pos.south());
-        if (northState.is(this) && southState.is(this)) {
+        if (checkIfShouldLink(southState, Direction.Axis.X) && checkIfShouldLink(northState, Direction.Axis.X)) {
             return baseState.setValue(POSITION, MIDDLE).setValue(AXIS, Direction.Axis.Z);
         }
-        if (!northState.is(this) && southState.is(this)) {
+        if (checkIfShouldLink(southState, Direction.Axis.X) && !checkIfShouldLink(northState, Direction.Axis.X)) {
             return baseState.setValue(POSITION, LEFT).setValue(AXIS, Direction.Axis.Z);
         }
-        if (northState.is(this) && !southState.is(this)) {
+        if (!checkIfShouldLink(southState, Direction.Axis.X) && checkIfShouldLink(northState, Direction.Axis.X)) {
             return baseState.setValue(POSITION, RIGHT).setValue(AXIS, Direction.Axis.Z);
         }
         return baseState.setValue(POSITION, SINGLE);
+    }
+
+    private boolean checkIfShouldLink(BlockState state, Direction.Axis axis) {
+        if (!state.is(this))
+            return false;
+
+        // 如果对方与修正方向不同，且对方并不是独立状态，则不可以接
+        if (state.getValue(AXIS) == axis) {
+            return state.getValue(POSITION) == SINGLE;
+        }
+        // 如果双方方向相同且毗邻，则无论如何都可以接
+        return true;
     }
 
     @Override
